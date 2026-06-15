@@ -8,6 +8,11 @@
     --cor-btn: #fff;
     --cor-btn-hover: #333;
     --cor-border-btn-hover: #333;
+    --cor-reslt-baixo: #3b82f6; /* Azul */
+    --cor-reslt-normal: #22c55e; /* Verde */
+    --cor-reslt-sobrepeso: #eab308; /* Amarelo */
+    --cor-reslt-obesidade: #f97316; /* Laranja */
+    --cor-reslt-obesidade-grave: #ef4444; /* Vermelho */
 }
 
 
@@ -135,22 +140,78 @@ main {
 /* resultado */
 
 #container-resultado {
-    display: flex;
+    display: none;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     border-radius: 10px;
     color: #333;
-    margin-top: 20px;
+    margin-top: 10px;
     width: 500px;
     height: 150px;
     background: var(--bg-imc);
+    
 
 }
+.resultado-baixo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
-/* .resultado-normal{
+.resultado-baixo h2{
+    color: var(--cor-reslt-baixo);
+    
+}
 
-} */
+.resultado-normal{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.resultado-normal h2{
+    color: var(--cor-reslt-normal);
+}
+
+
+.resultado-sobrepeso{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.resultado-sobrepeso h2{
+    color: var(--cor-reslt-sobrepeso);
+}
+
+
+.resultado-obesidade{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.resultado-obesidade h2{
+    color: var(--cor-reslt-obesidade);
+}
+
+
+.resultado-obesidade-grave{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.resultado-obesidade-grave h2{
+    color: var(--cor-reslt-obesidade-grave);
+}
 
 /* fim resultado */
 
@@ -248,7 +309,7 @@ main {
 
     #container-resultado {
         display: none;
-        padding-left: 20px;
+       
         width: 80vw;
         height: 150px;
 

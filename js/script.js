@@ -26,7 +26,7 @@ btn.addEventListener('click', (e) => {
         containerResult.style.display = 'flex';
         containerResult.innerHTML = `
             <div class="resultado-baixo">
-                <h2>Seu IMC está <span>Abaixo do Normal</span></h2>
+                <h2>Abaixo do Normal</h2>
                 <p>O resultado é: <span>${result.toFixed(2)}</span> </p>
                 <p id="data-calculo">${dataHora}</p>
             </div>
@@ -35,7 +35,7 @@ btn.addEventListener('click', (e) => {
         containerResult.style.display = 'flex';
         containerResult.innerHTML = `
             <div class="resultado-normal">
-                <h2>Seu IMC está <span>Normal</span></h2>
+                <h2>Normal</h2>
                 <p>O resultado é: <span>${result.toFixed(2)}</span> </p>
                 <p id="data-calculo">${dataHora}</p>
             </div>
@@ -44,7 +44,7 @@ btn.addEventListener('click', (e) => {
         containerResult.style.display = 'flex';
         containerResult.innerHTML = `
             <div class="resultado-sobrepeso">
-                <h2>Seu IMC está com <span>Sobrepeso</span></h2>
+                <h2>Sobrepeso</h2>
                 <p>O resultado é: <span>${result.toFixed(2)}</span> </p>
                 <p id="data-calculo"${dataHora}</p>
             </div>
@@ -52,8 +52,8 @@ btn.addEventListener('click', (e) => {
     } else if (result >= 30 && result <= 39.9) {
         containerResult.style.display = 'flex';
         containerResult.innerHTML = `
-            <div class="resultado-Obesidade">
-                <h2>Seu IMC está com <span>Obesidade</span></h2>
+            <div class="resultado-obesidade">
+                <h2>Obesidade</h2>
                 <p>O resultado é: <span>${result.toFixed(2)}</span> </p>
                 <p id="data-calculo">${dataHora}</p>
             </div>
@@ -61,8 +61,8 @@ btn.addEventListener('click', (e) => {
     } else if (result >= 40) {
         containerResult.style.display = 'flex';
         containerResult.innerHTML = `
-            <div class="resultado-Obesidade-Grave">
-                <h2>Seu IMC está com <span>Obesidade Grave</span></h2>
+            <div class="resultado-obesidade-grave">
+                <h2>Obesidade Grave</h2>
                 <p>O resultado é: <span>${result.toFixed(2)}</span> </p>
                 <p id="data-calculo">${dataHora}</p>
             </div>
