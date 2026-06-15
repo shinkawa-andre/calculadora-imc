@@ -2,17 +2,23 @@
     --bg-btn: #333;
     --bg-btn-hover: #6C7A89;
     --bg-imc: #6C7A89;
+    --bg-container: white;
 
     --cor-icon: #333;
     --cor-title: #333;
     --cor-btn: #fff;
     --cor-btn-hover: #333;
     --cor-border-btn-hover: #333;
-    --cor-reslt-baixo: #3b82f6; /* Azul */
-    --cor-reslt-normal: #22c55e; /* Verde */
-    --cor-reslt-sobrepeso: #eab308; /* Amarelo */
-    --cor-reslt-obesidade: #f97316; /* Laranja */
-    --cor-reslt-obesidade-grave: #ef4444; /* Vermelho */
+    --cor-reslt-baixo: #3b82f6;
+    /* Azul */
+    --cor-reslt-normal: #22c55e;
+    /* Verde */
+    --cor-reslt-sobrepeso: #eab308;
+    /* Amarelo */
+    --cor-reslt-obesidade: #f97316;
+    /* Laranja */
+    --cor-reslt-obesidade-grave: #ef4444;
+    /* Vermelho */
 }
 
 
@@ -33,14 +39,113 @@
     box-sizing: border-box;
 }
 
-section {
+#container {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     width: 100vw;
     height: 100vh;
+    background-color: var(--bg-container);
 }
+
+
+/* Modal */
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    width: 90%;
+    max-width: 700px;
+    max-height: 80vh;
+    min-height: 50vh;
+    overflow-y: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    position: relative;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.excluir {
+    border: none;
+    background: #ef4444;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.excluir:hover{
+    opacity: 0.8;
+}
+
+
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+
+th,
+td {
+    padding: 8px;
+    text-align: center;
+}
+
+
+
+
+@media (max-width: 600px) {
+    .modal-content {
+        width: 95%;
+        padding: 15px;
+    }
+
+    table {
+        font-size: 12px;
+    }
+
+    th,
+    td {
+        padding: 5px;
+    }
+
+    .btn-delete {
+        padding: 4px 6px;
+        font-size: 12px;
+    }
+}
+
+/* Fim Modal */
+
+
+
+
+
+
+
 
 /* Main */
 
@@ -150,22 +255,23 @@ main {
     width: 500px;
     height: 150px;
     background: var(--bg-imc);
-    
+
 
 }
-.resultado-baixo{
+
+.resultado-baixo {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.resultado-baixo h2{
+.resultado-baixo h2 {
     color: var(--cor-reslt-baixo);
-    
+
 }
 
-.resultado-normal{
+.resultado-normal {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -173,43 +279,43 @@ main {
 }
 
 
-.resultado-normal h2{
+.resultado-normal h2 {
     color: var(--cor-reslt-normal);
 }
 
 
-.resultado-sobrepeso{
+.resultado-sobrepeso {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.resultado-sobrepeso h2{
+.resultado-sobrepeso h2 {
     color: var(--cor-reslt-sobrepeso);
 }
 
 
-.resultado-obesidade{
+.resultado-obesidade {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.resultado-obesidade h2{
+.resultado-obesidade h2 {
     color: var(--cor-reslt-obesidade);
 }
 
 
-.resultado-obesidade-grave{
+.resultado-obesidade-grave {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.resultado-obesidade-grave h2{
+.resultado-obesidade-grave h2 {
     color: var(--cor-reslt-obesidade-grave);
 }
 
@@ -309,7 +415,7 @@ main {
 
     #container-resultado {
         display: none;
-       
+
         width: 80vw;
         height: 150px;
 

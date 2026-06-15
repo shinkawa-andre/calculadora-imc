@@ -1,51 +1,113 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-br">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
-        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="/css/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="/css/style.css" />
     <title>IMC</title>
-</head>
+  </head>
 
-<body>
+  <body>
+    <section id="container">
+      <main>
+        <div class="imc">
+          <div class="icon-config">
+            <a id="openModal"><i class="fa-solid fa-gear"></i></a>
+          </div>
 
-    <section>
+          <!-- Modal -->
+          <div id="modal" class="modal">
+            <div class="modal-content">
+              <span id="closeModal" class="close">&times;</span>
+              <h2>Histórico e Comfigurações</h2>
+              <p>
+                Veja abaixo o seu histórico e configure as cores principais.
+              </p>
 
-        <main>
-            <div class="imc">
-                <div class="icon-config">
-                    <a><i class="fa-solid fa-gear"></i></a>
+              <div id="cores">
+                <form id="formCores">
+                  <label>Fundo Principal</label>
+                  <input
+                    type="color"
+                    name="fundo-principal"
+                    value="#fff"
+                    id="fundo-principal"
+                  />
+
+                  <label>Fundo Card</label>
+                  <input
+                    type="color"
+                    name="fundo-card"
+                    value="#6C7A89"
+                    id="fundo-card"
+                  />
+
+                  <label>Fundo Botão</label>
+                  <input
+                    type="color"
+                    name="fundo-botao"
+                    value="#333"
+                    id="fundo-botao"
+                  />
+
+                  <button type="submit" id="salvar-cores">Salvar</button>
+                </form>
+                <div class="btnPadrao"><button id="padrao">Resetar Cores</button></div>
+                <div class="table-container">
+                  <table>
+                    <thead>
+                      <tr>
+                        <th>Data</th>
+                        <th>Peso</th>
+                        <th>Altura</th>
+                        <th>IMC</th>
+                        <th>Action</th>
+                      </tr>
+                    </thead>
+                    <tbody id="tabela-imc"></tbody>
+                  </table>
                 </div>
-
-                <h2 class="title">
-                    Calculadora de IMC
-                </h2>
-                <div class="inputs">
-                    <form id="form">
-                        <input type="number" name="height" id="height" placeholder="Digite sua Altura...(metros)">
-                        <input type="number" name="weight" id="weight" placeholder="Digite seu Peso...(kg)">
-                        <button type="submit" id="btn">Calcular</button>
-                    </form>
-                </div>
-
+              </div>
             </div>
-        </main>
+          </div>
+          <!-- Fim Modal -->
 
+          <h2 class="title">Calculadora de IMC</h2>
+          <div class="inputs">
+            <form id="form">
+              <input
+                type="number"
+                name="height"
+                id="height"
+                placeholder="Digite sua Altura...(metros)"
+              />
+              <input
+                type="number"
+                name="weight"
+                id="weight"
+                placeholder="Digite seu Peso...(kg)"
+              />
+              <button type="submit" id="btn">Calcular</button>
+            </form>
+          </div>
+        </div>
+      </main>
 
+      <div id="container-resultado">
+        <div class="resultado-baixo">
+          <h2>Seu IMC está <span>Abaixo do Normal</span></h2>
+          <p>O resultado é: <span>22.22</span></p>
+          <p id="data-calculo"></p>
+        </div>
 
-        <div id="container-resultado">
-
-            <div class="resultado-baixo">
-                <h2>Seu IMC está <span>Abaixo do Normal</span></h2>
-                <p>O resultado é: <span>22.22</span> </p>
-                <p id="data-calculo"></p>
-            </div>
-
-            <!-- <div class="resultado-normal">
+        <!-- <div class="resultado-normal">
                 <h2>Seu IMC está <span>Normal</span></h2>
                 <p>O resultado é: </p>
             </div>
@@ -69,14 +131,9 @@
                 <h2>Seu IMC está com <span>Obesidade Grau 3</span></h2>
                 <p>O resultado é: </p>
             </div> -->
-
-        </div>
-
+      </div>
     </section>
 
-
-
-    <script src='js/script.js'></script>
-</body>
-
+    <script src="js/script.js"></script>
+  </body>
 </html>
