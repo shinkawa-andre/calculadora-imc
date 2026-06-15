@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/css/style.css">
+    <title>IMC</title>
+</head>
+
+<body>
+
+    <section>
+
+        <main>
+            <div class="imc">
+                <div class="icon-config">
+                    <a><i class="fa-solid fa-gear"></i></a>
+                </div>
+
+                <h2 class="title">
+                    Calculadora de IMC
+                </h2>
+                <div class="inputs">
+                    <form id="form">
+                        <input type="number" name="height" id="height" placeholder="Digite sua Altura...(metros)">
+                        <input type="number" name="weight" id="weight" placeholder="Digite seu Peso...(kg)">
+                        <button type="submit" id="btn">Calcular</button>
+                    </form>
+                </div>
+
+            </div>
+        </main>
+
+
+
+        <div id="container-resultado">
+
+            <div class="resultado-baixo">
+                <h2>Seu IMC está <span>Abaixo do Normal</span></h2>
+                <p>O resultado é: <span>22.22</span> </p>
+                <p id="data-calculo"></p>
+            </div>
+
+            <!-- <div class="resultado-normal">
+                <h2>Seu IMC está <span>Normal</span></h2>
+                <p>O resultado é: </p>
+            </div>
+
+            <div class="resultado-sobrepeso">
+                <h2>Seu IMC está com <span>Sobrepeso</span></h2>
+                <p>O resultado é: </p>
+            </div>
+
+            <div class="resultado-obesidade-i">
+                <h2>Seu IMC está com <span>Obesidade Grau 1</span></h2>
+                <p>O resultado é: </p>
+            </div>
+
+            <div class="resultado-obesidade-ii">
+                <h2>Seu IMC está com <span>Obesidade Grau 2</span></h2>
+                <p>O resultado é: </p>
+            </div>
+
+            <div class="resultado-obesidade-iii">
+                <h2>Seu IMC está com <span>Obesidade Grau 3</span></h2>
+                <p>O resultado é: </p>
+            </div> -->
+
+        </div>
+
+    </section>
+
+
+
+    <script src='js/script.js'></script>
+</body>
+
+</html>
