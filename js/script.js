@@ -153,6 +153,7 @@ window.addEventListener('click', (e) => {
 const salvarCores = document.getElementById("salvar-cores");
 const container = document.getElementById("container");
 const cardImc = document.querySelector(".imc");
+const btnImc = document.getElementById("btn");
 
 salvarCores.addEventListener('click', (e) => {
     e.preventDefault();
@@ -164,10 +165,14 @@ salvarCores.addEventListener('click', (e) => {
     const fundoCard = document.getElementById("fundo-card").value;
     cardImc.style.backgroundColor = fundoCard;
 
+    const fundoBotao = document.getElementById("fundo-botao").value;
+    btnImc.style.backgroundColor = fundoBotao;
+
 
     localStorage.setItem("cores", JSON.stringify({
         container: fundoPrincipal,
-        cardImc: fundoCard
+        cardImc: fundoCard,
+        btnImc: fundoBotao
     }));
 })
 
@@ -176,6 +181,7 @@ const coresSalvas = JSON.parse(localStorage.getItem("cores"));
 if (coresSalvas) {
     container.style.backgroundColor = coresSalvas.container;
     cardImc.style.backgroundColor = coresSalvas.cardImc;
+    btnImc.style.backgroundColor = coresSalvas.btnImc;
 }
 
 
@@ -184,13 +190,16 @@ btnPadrao.addEventListener("click", () => {
 
     const corContainer = "#fff";
     const corCard = "#6C7A89";
+    const corBtn = "#333";
 
     container.style.backgroundColor = corContainer;
     cardImc.style.backgroundColor = corCard;
+    btn.style.backgroundColor = corBtn
 
     localStorage.setItem("cores", JSON.stringify({
         container: corContainer,
-        cardImc: corCard
+        cardImc: corCard,
+        btnImc: corBtn
     }));
 });
 
